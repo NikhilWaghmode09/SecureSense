@@ -44,7 +44,7 @@ SecureSense is an ESP32-based gas and environment monitoring system designed to 
 
 ## Wiring Diagram🔌
 
-![Wiring Diagram](https://github.com/NikhilWaghmode09/SecureSense/assets/72146637/87cc2c81-06e4-461c-93e6-bc0c3372f3ab)
+![Wiring Diagram](https://github.com/NikhilWaghmode09/SecureSense/assets/72146637/94eb312c-d5bc-4a61-b1c2-fc955a325bed)
 
 ## Troubleshooting🛑
 
