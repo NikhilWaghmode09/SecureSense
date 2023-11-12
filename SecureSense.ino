@@ -1,7 +1,7 @@
 /*CODES FOR THE DEVICE "TEST BLYNK" #define BLYNK_TEMPLATE_ID "TMPL3TwzXJHWX"
 #define BLYNK_TEMPLATE_NAME "TEST BLYNK"
 #define BLYNK_AUTH_TOKEN "KL1nVMXMcmJSxDLfMNBPsNFZ9OVWtZBc"*/
-// #include "DHT.h" //new
+// #include "DHT.h" //Alternative way.
 #include <DFRobot_DHT11.h>
 DFRobot_DHT11 DHT;
 #define DHT11_PIN 2
@@ -30,14 +30,14 @@ int led = 27;
 void setup() {
   Serial.begin(115200);
   delay(100);
-  WiFi.begin("Nikhil's A51", "");
+  WiFi.begin("Nikhil's A51", ""); //WiFi credentials. 
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
     Serial.println("Connecting to WiFi...");
   }
   // dht.begin();
   // Initialize Blynk
-  //  Blynk.begin(auth, WiFi.SSID().c_str(), WiFi.psk().c_str());
+  //  Blynk.begin(auth, WiFi.SSID().c_str(), WiFi.psk().c_str()); //Alternative way.
   Blynk.begin(BLYNK_AUTH_TOKEN, WiFi.SSID().c_str(), WiFi.psk().c_str());
   pinMode(led,OUTPUT);
   pinMode(buzz,OUTPUT);
@@ -50,7 +50,7 @@ void loop() {
   Blynk.run();
   // double h = dht.readHumidity();
   // double t = dht.readTemperature();
-  Blynk.virtualWrite(V2, DHT.temperature);
+  Blynk.virtualWrite(V2, DHT.temperature); 
   Blynk.virtualWrite(V3, DHT.humidity);
   delay(1000);
   int threshold = 1000;
