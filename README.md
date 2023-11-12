@@ -48,6 +48,7 @@ SecureSense is an ESP32-based gas and environment monitoring system designed to 
 
 ## Troubleshooting🛑
 
+- In case of problem realted to WiFi connectivity try using an open WiFi.
 - While uploading the code to ESP32 make sure you disconnect DHT11 sensor to avoid upload errors.
 - If you encounter issues with gas readings, check the MQ2 sensor connections.
 - For temperature/humidity issues, verify the DHT11 sensor connections.
